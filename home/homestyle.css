@@ -1,0 +1,7 @@
+.header{
+    min-height: 70vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(213, 99, 99, 0.1)),url(images/vector_crowd.png);
+    background-position: center;
+    background-size: cover;
+}
