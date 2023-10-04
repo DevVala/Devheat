@@ -6,13 +6,14 @@
 
     <title>Login Form</title>
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./signupstyle.css" />
   </head>
 
   <body>
     <!-- partial:index.partial.html -->
 
     <section>
+      <!-- <span></span> <span></span> <span></span> <span></span> <span></span>
       <span></span> <span></span> <span></span> <span></span> <span></span>
       <span></span> <span></span> <span></span> <span></span> <span></span>
       <span></span> <span></span> <span></span> <span></span> <span></span>
@@ -63,32 +64,36 @@
       <span></span> <span></span> <span></span> <span></span> <span></span>
       <span></span> <span></span> <span></span> <span></span> <span></span>
       <span></span> <span></span> <span></span> <span></span> <span></span>
-      <span></span> <span></span> <span></span> <span></span> <span></span>
-      <span></span> <span></span> <span></span> <span></span> <span></span>
+      <span></span> <span></span> <span></span> <span></span> <span></span> -->
 
       <div class="signin">
         <div class="content">
-          <h2>FINDER</h2>
+          <h2>Misfits</h2>
           <h4>Lets make your team with us!</h4>
-          <h2>Log In</h2>
-
-          <div class="form">
-            <div class="inputBox">
-              <input type="text" required /> <i>Username</i>
-            </div>
+          <h2>Login</h2>
+          <form action="login.php" method="post">
+            <div class="form">
 
             <div class="inputBox">
-              <input type="password" required /> <i>Password</i>
-            </div>
+              
+                <input type="text" required /> <i>Email Address</i>
+              </div>
 
-            <div class="links">
-              <a href="#">Forgot Password</a> <a href="#">Signup</a>
-            </div>
+              <div class="inputBox">
+                <input type="text" required /> <i>Username</i>
+              </div>
+              <div class="inputBox">
+                <input type="text" required /> <i>Password</i>
+              </div>
+              <div class="links">
+                <a href="#">New User?</a> <a href="signup.html">Sign Up</a>
+              </div>
+        
 
             <div class="inputBox">
-              <input type="submit" value="Login" />
+              <input type="submit" value="Log In" />
             </div>
-          </div>
+          </form></div>
         </div>
       </div>
     </section>
