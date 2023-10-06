@@ -1,4 +1,3 @@
-![Logo](https://i.imgur.com/Z6NQiSk.png[/img])
 # Misfits
 A platform that lets you find your teammate.
 
@@ -6,9 +5,14 @@ A platform that lets you find your teammate.
 ## Table of contents
 -[Misfits](#misfits)
 -[Table of contents](#table-of-contents)
--[Introduction]()
--[]()
--[]()
+-[Introduction](#introduction)
+-[Working](#how-we-work)
+-[Getting Started](#getting-started)
+-[Technologies](#technologies)
+-[Future Aspirations](#future-aspirations)
+-[Feedback](#feedback)
+-[Contact Us](#contact-us)
+-[Authors](#authors)
 ## Introduction
 
 Misfits is a remarkable platform designed to streamline the process of finding ideal teammates for various of hackathons worldwide.
@@ -41,6 +45,17 @@ Getting started is as simple as it can be.
 4. **Connect with the people:** Discover new people , diversified based on their skills and assets . Look into their profiles , directly connect with them through various other platforms that will be linked to these profiles.
 5. **Explore Hackathons:** Discover the various available hackathons and register in them.. 
 
+## Technologies
+### Front-end
+HTML
+CSS
+Javascript
+### Back-end
+Mongodb via Mongoose
+Express
+EJS view engine
+Nodejs
+
 ## Future Aspirations
 
 Aspire to make this website :-
@@ -49,7 +64,9 @@ Aspire to make this website :-
 3. Make this quicker.
 4. Collaborating with various institute/orgaisatios making it way faster to register for various Hackathons or other contest.
 
+## Video Demonstration 
 
+https://drive.google.com/drive/folders/1CQj7Dp3XZV_RXmxcDTOhbvkkiRuxbyz0
 
 ## Feedback
 
@@ -61,6 +78,6 @@ Feedback is an invaluable tool for improvement and growth. We highly value any f
 If you have any questions, suggestions, or concerns, feel free to reach out to us at [support@askus.com](mailto:support@askus.com) or through our [Contact Form](https://www.askus.com/contact).
 ## Authors
 
-- [Vishu Patle](https://www.github.com/Shad0-w)
-- [Vanshit Shivani](https://www.github.com/Amank-07)
-- [Dev Vala](https://www.github.com/octokatherine)
+- [Vishu Patle](https://www.github.com/vishu0310)
+- [Vanshit Shivani](https://www.github.com/Silence2612)
+- [Dev Vala](https://github.com/DevVala)
