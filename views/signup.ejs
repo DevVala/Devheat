@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="./signupstyle.css" />
+  </head>
+
+  <body>
+    <!-- partial:index.partial.html -->
+
+    <section>
+
+      <div class="signin">
+        <div class="content">
+          <h2>Misfits</h2>
+          <h4>Lets make your team with us!</h4>
+          <h2>Sign Up</h2>
+          <form action="/index" method="POST">
+            <div class="form">
+
+            <div class="inputBox">
+              
+                <input type="text" name="First_name" required /> <i>First Name</i>
+              </div>
+
+              <div class="inputBox">
+                <input type="text" name="Last_name" required /> <i>Last Name</i>
+              </div>
+              <div class="inputBox">
+                <input type="text" name="Email_address" /> <i>Email Address</i>
+              </div>
+            <div class="inputBox">
+              <input type="text" name="User_name" required /> <i>Username</i>
+            </div>
+
+            <div class="inputBox">
+              <input type="password" name="Password" required /> <i>Password</i>
+            </div>
+
+            <div class="links">
+              <a href="#">Forgot Password</a> <a href="/index">Log in</a>
+            </div>
+
+            <div class="inputBox">
+              <input type="submit" value="Sign In" />
+            </div>
+          </form></div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+  
+  var link = document.getElementById("My_link");
+
+ 
+  link.addEventListener("click", function(event) {
+   
+    event.preventDefault();
+
+    // Change the URL to "signup.ejs" using JavaScript
+    window.location.href = "index"; // Change to the desired URL
+  });
+</script>
+
+</html>

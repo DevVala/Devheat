@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,100;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,100;1,200&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="searchpage.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+<style>
+  /* public/style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left{
+  display: flex;
+
+}
+
+</style>
+
+  </head>
+  <body>
+    <header class="container">
+      <nav class="navigation flex">
+        <div class="menu-bar flex">
+          <div class="logo">
+            <h1>Misfits</h1>
+            
+          </div>
+          <div class="menu">
+            <ul class="flex">
+              <li><a href="/home">Home</a></li>
+              <li><a href="/home">About</a></li>
+              <li><a href="/">Hackathons</a></li>
+              <li><a href="#"></a></li>
+              <li><a href=""></a></li>
+            </ul>
+          </div>
+          <button class="toggle"><span class="fa fa-bars"></span></button>
+        </div>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search..." />
+          <button type="submit" class="search-button"><span class="fa fa-search icon"
+            ></span></button>
+        </div>
+      </nav>
+    </header>
+
+
+
+    <!-- Offer box start -->
+    <section class="offer inner">
+      <div class="left">
+        <form action="/search" method="POST">
+        <h2>Search your teammates based on their Skills and Experience</h2>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <!-- Use the appropriate action URL -->
+            <label for="tech-stack">Select Technology Stack(s):</label>
+            <br>
+            <br>
+            <br>
+            <select id="tech-stack" class="js-example-basic-multiple" name="TechStack[]" multiple="multiple">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <!-- Add more technology stack options as needed -->
+            </select>
+        <br>
+        <br>
+        <br>
+            <label for="experience">Select Experience Level:</label>
+            <br>
+        <br>
+        <br>
+            <select id="experience" name="Experience">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+        <br>
+            <button type="submit">Submit</button>
+       
+        
+        
+      </form>
+      </div>
+
+
+
+
+      <!-- rightttt -->
+      <div class="left right">
+        <div id="user-list">
+      
+          <!-- User data will be displayed here -->
+          <h1>User Cards</h1>
+          <div class="card-container">
+            <% data.forEach(user => { %>
+            <div class="card">
+                <h2><%= user.First_name user.Last_name%></h2>
+                <h3><%= user.User_name %></h3>
+                <p>Email: <%= user.Email_address %></p>
+                <!-- <p>Skills: <%= user.skills.join(', ') %></p> -->
+                <p>Skills: <%= user.TechStack.join(', ') %></p>
+                <p>Experience:  <%= user.Experience %></p>
+            </div>
+        <% }); %>
+    </div>
+      </div>
+      </div>
+    </section>
+
+   
+
+    <!-- Footer sectionn -->
+    <footer>
+      <section class="footer-section flex inner">
+        
+        <div class="f-box">
+          <h1>INFORMATIONS</h1>
+          <p>About Us</p>
+          <p>Cotumer Service</p>
+          <p>New Collection</p>
+          <p>Best Seller</p>
+          <p>Privacy Policies</p>
+          <p>Blog</p>
+        </div>
+        <div class="f-box">
+          <h1>COSTUME RESERVICE</h1>
+          <p>Search Terms</p>
+          <p>Advance Search</p>
+          <p>Order & Retuns</p>
+          <p>Contact Us</p>
+          <p>Helpn& FAQ</p>
+          <p>Consultance</p>
+        </div>
+
+        <div class="f-box f-big">
+          <h1>STAY CONNECTED</h1>
+          <div class="social-icon flex">
+            <span class="fa fa-edge social-l"></span>
+            <span class="fa fa-twitter social-l"></span>
+            <span class="fa fa-facebook social-l"></span>
+            <span class="fa fa-pinterest social-l"></span>
+            <span class="fa fa-instagram social-l"></span>
+          </div>
+      </section>
+
+      <section class="copyright">
+        <p>@copyright 2023 | MISFITS Website</p>
+      </section>
+    </footer>
+  </body>
+
+  <script>
+    $(document).ready(function() {
+        // Initialize select2 for the technology stack with multi-select enabled
+        $('#tech-stack').select2({
+            placeholder: 'Select one or more',
+        });
+
+        // Initialize select2 for the experience dropdown
+        $('#experience').select2();
+
+        // Sample user data
+        const userData = [
+            { name: 'Vishu Patle', techStack: ['javascript', 'python'], experience: 'intermediate' },
+            { name: 'Vanshit Shivani', techStack: ['python', 'java'], experience: 'beginner' },
+            { name: 'Dev Vala', techStack: ['javascript', 'java'], experience: 'advanced' },
+            { name: 'Harshita Purwar', techStack: ['python', 'java'], experience: 'advanced' },
+            { name: 'Dev Vala', techStack: ['javascript', 'java'], experience: 'advanced' },
+            { name: 'Dev Vala', techStack: ['javascript', 'java'], experience: 'advanced' },
+            { name: 'Dev Vala', techStack: ['javascript', 'java'], experience: 'advanced' },
+            { name: 'Dev Vala', techStack: ['javascript', 'java'], experience: 'advanced' }
+            // Add more user data as needed
+        ];
+        
+        
+
+        // Get the user list container
+        const userList = document.getElementById('user-list');
+
+        // Function to filter users based on the selected filters
+        function filterUsers() {
+            const selectedTechStacks = $('#tech-stack').val();
+            const selectedExperience = $('#experience').val();
+
+            // Filter users based on the selected filters
+            const filteredUsers = userData.filter(user =>
+                (selectedTechStacks === null || selectedTechStacks.every(stack => user.techStack.includes(stack))) &&
+                (selectedExperience === null || user.experience === selectedExperience)
+            );
+
+            // Display the filtered user data
+            displayUsers(filteredUsers);
+        }
+
+        // Function to display filtered user data
+        function displayUsers(users) {
+            // Clear the current user list
+            userList.innerHTML = '';
+
+            // Create and append user elements to the user list container
+            users.forEach(user => {
+                const userElement = document.createElement('div');
+                userElement.textContent = `Name: ${user.name}, Tech Stack(s): ${user.techStack.join(', ')}, Experience: ${user.experience}`;
+                userList.appendChild(userElement);
+
+
+                  for(let i=0;i<Object.keys(data).length;i++){
+                  // console.log(data[i])
+                  const userrow=document.createElement('div');
+                  user.appendChild(userrow);
+                  userrow.classList.add("user-row");
+                  const userinfo=document.createElement('div');
+                  userrow.appendChild(userinfo);
+                  userinfo.classList.add("user-info");
+                  const img=document.createElement('img');
+                  userinfo.appendChild(img);
+                  img.src='download.png';
+                  img.alt = 'User';
+                  const span=document.createElement('span');
+                  userinfo.appendChild(span);
+                  span.innerText = `${data[i].firstName} : Skills(${data[i].skills})`;
+                  // const span1=document.createElement('span');
+                  // userinfo.appendChild(span1);
+                  // span.innerText = `${data[i].email}`;
+                  const button=document.createElement('button');
+                  button.classList.add("action-follow");
+                  userrow.appendChild(button);
+                  button.innerText="Add in team";
+
+  }
+            });
+        }
+
+        // Add event listeners to the select elements
+        $('#tech-stack').on('change', filterUsers);
+        $('#experience').on('change', filterUsers);
+
+
+
+
+        function addUsers(userData){
+    // console.log(data)
+    const user=document.getElementById('friends-body');
+    for(let i=0;i<Object.keys(data).length;i++){
+        // console.log(data[i])
+        const userrow=document.createElement('div');
+        user.appendChild(userrow);
+        userrow.classList.add("user-row");
+        const userinfo=document.createElement('div');
+        userrow.appendChild(userinfo);
+        userinfo.classList.add("user-info");
+        const img=document.createElement('img');
+        userinfo.appendChild(img);
+        img.src='download.png';
+        img.alt = 'User';
+        const span=document.createElement('span');
+        userinfo.appendChild(span);
+        span.innerText = `${data[i].firstName} : Skills(${data[i].skills})`;
+        // const span1=document.createElement('span');
+        // userinfo.appendChild(span1);
+        // span.innerText = `${data[i].email}`;
+        const button=document.createElement('button');
+        button.classList.add("action-follow");
+        userrow.appendChild(button);
+        button.innerText="Add in team";
+
+  }
+}
+
+        
+
+        // Initially display all users
+        displayUsers(userData);
+    });
+</script>
+
+
+</html>
